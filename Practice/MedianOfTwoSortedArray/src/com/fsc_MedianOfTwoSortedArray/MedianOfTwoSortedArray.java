@@ -22,10 +22,8 @@ public class MedianOfTwoSortedArray {
 	
 	public static void main(String args[]) {
 		
-		int[] num1 = {1,3};
-		int[] num2 = {2,3,4,5,6,7,9};
-		List<Integer> list = new ArrayList<>();
-
+		int[] num1 = {1,3,7,8,9};
+		int[] num2 = {2,3,4,5,6,7,9};					
 
 		List<Integer> num3 = new ArrayList<>(Arrays.stream(num1).boxed().toList());
 		List<Integer> num4 = new ArrayList<>(Arrays.stream(num2).boxed().toList());
