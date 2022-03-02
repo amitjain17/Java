@@ -13,7 +13,7 @@ public class AverageSalaryExcludingtheMinimumandMaximumSalary {
 		int sum = Arrays.stream(salary).reduce((int x,int y)-> x+y).getAsInt();
 		int max = Arrays.stream(salary).max().getAsInt();
 		int min = Arrays.stream(salary).min().getAsInt();
-		Integer.M
+		
 		int size = salary.length;
 		Double avg =  ((double)(sum-(max+min))/(size-2));
 		System.out.println(avg);	
