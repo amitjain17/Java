@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:p="http://www.springframework.org/schema/p" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- <bean id="hello" class="com.training.bean.HelloWorld">
+<constructor-arg name="message" value=" in Constructor"></constructor-arg>
+
+<property name="message" value=" In Setter"></property>
+</bean>
+
+<bean id="op" class="com.training.bean.MultiplyOperator">
+	
+</bean>
+
+<bean id="add" class="com.training.bean.AddOperator">
+</bean>
+
+<bean id="demo" class="com.training.bean.OperatorDemo">
+	<property name="operator" ref="add"></property>
+</bean> -->
+
+</beans>
+
