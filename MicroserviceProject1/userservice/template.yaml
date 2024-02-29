@@ -1,53 +1,35 @@
-# This AWS SAM template has been generated from your function's configuration. If
-# your function has one or more triggers, note that the AWS resources associated
-# with these triggers aren't fully specified in this template and include
-# placeholder values. Open this template in AWS Application Composer or your
-# favorite IDE and modify it to specify a serverless application with other AWS
-# resources.
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: An AWS Serverless Application Model template describing your function.
+Description: >
+  zip
+
+  Sample SAM Template for zip
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 20
+    MemorySize: 512
+
 Resources:
-  UserService:
-    Type: AWS::Serverless::Function
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: .
-      Description: ''
-      MemorySize: 512
-      Timeout: 15
-      Handler: com.project.userservice.handler.LambdaHandler
+      Handler: com.project.userservice.handler.LambdaHandler::handleRequest
       Runtime: java21
       Architectures:
         - x86_64
-      EphemeralStorage:
-        Size: 512
-      EventInvokeConfig:
-        MaximumEventAgeInSeconds: 21600
-        MaximumRetryAttempts: 2
-      FunctionUrlConfig:
-        AuthType: NONE
-        InvokeMode: BUFFERED
-      PackageType: Zip
-      Policies:
-        - Statement:
-            - Effect: Allow
-              Action:
-                - logs:CreateLogGroup
-              Resource: arn:aws:logs:ap-southeast-2:992382831138:*
-            - Effect: Allow
-              Action:
-                - logs:CreateLogStream
-                - logs:PutLogEvents
-              Resource:
-                - >-
-                  arn:aws:logs:ap-southeast-2:992382831138:log-group:/aws/lambda/UserService:*
+      MemorySize: 512
       SnapStart:
-        ApplyOn: None
+        ApplyOn: "PublishedVersions"
+      Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+        Variables:
+          PARAM1: VALUE
       Events:
-        Api1:
-          Type: Api
+        HelloWorld:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /MyResource
+            Path: /{proxy+}
             Method: ANY
-      RuntimeManagementConfig:
-        UpdateRuntimeOn: Auto
+
