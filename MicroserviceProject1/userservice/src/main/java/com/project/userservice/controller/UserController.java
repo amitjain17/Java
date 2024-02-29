@@ -11,7 +11,7 @@ public class UserController {
 	@GetMapping("/healthCheck")
 	public String healthCheck() {
         Date d1 = new Date(); 
-        String result  = "Application is working at time: " + d1;
+        String result  = "Application is working at time: " + d1 ;
 		System.out.println(result);
 		return result;
 	}
