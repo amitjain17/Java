@@ -1,2 +1,9 @@
+com\project\userservice\exception\GlobalException.class
+com\project\userservice\response\ErrorPayload.class
 com\project\userservice\UserService.class
 com\project\userservice\controller\UserController.class
+com\project\userservice\service\UserServiceImpl.class
+com\project\userservice\entities\User.class
+com\project\userservice\exception\ResourceNotFoundException.class
+com\project\userservice\repository\UserRepo.class
+com\project\userservice\service\UserService.class
